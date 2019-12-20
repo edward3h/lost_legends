@@ -19,7 +19,7 @@ margin: 0 10%;
 div.datasheet {
   display: grid;
   grid-template-columns: [name] 4fr [col1] 1fr repeat(6, 1fr) [col2] 1fr 6fr;
-  margin: 0 10%;
+  margin: 20px 10% 0;
   border-radius: 30px;
   border: medium ridge;
   background-color: #EEE;
@@ -96,6 +96,11 @@ div.dsdesc {
 position: relative;
   top: 20px;
 }
+.el::after {
+  content: url("assets/icon_EL.png");
+position: relative;
+  top: 14px;
+}
 .power {
   float: left;
   background-image: url("assets/octagon.png");
@@ -124,7 +129,7 @@ position: relative;
   font-size: 1.1em;
   font-weight: bold;
 }
-div.datasheet .name, div.datasheet div.dsdesc, div.datasheet .dssection {
+div.datasheet .name, div.pvunittable .name, div.datasheet div.dsdesc, div.datasheet .dssection {
   padding-left: 12px;
 }
 h1, h2 {
@@ -140,22 +145,43 @@ h2.faction {
   color: white;
 
 }
+
+div.pvwrapper {
+ margin: 0 10%;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-column-gap: 2em;
+ grid-row-gap: 2em;
+ align-items: start;
+}
 div.pvunittable {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-    margin: 0 10%;
-  width: 40%;
 border: thin ridge;
 }
 
-.pvtitle {
+div.pvweapontable {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+border: thin ridge;
+}
+
+.pvunittable .pvtitle {
   grid-column: span 3;
+}
+
+.pvweapontable .pvtitle {
+  grid-column: span 2;
+}
+
+.pvtitle {
     font-family: 'Saira Extra Condensed', sans-serif;
     text-transform: uppercase;
       background-color: black;
       color: white;
       font-weight: bold;
 padding-left: 12px;
+font-size: 1.4em;
 }
 .pvhead div {
 font-family: 'Crimson Text', serif;
@@ -179,7 +205,7 @@ they are not repeated here.</p>
 <h2 class="faction">Astra Militarum</h2>
 <h2>Datasheets</h2>
 <div class="datasheet">
-<div class="dstitle"><span class="cat fa"></span><span class="power">4</span>Imperial Guard Land Speeders</div>
+<div class="dstitle"><span class="cat fa"></span><span class="power">3</span>Imperial Guard Land Speeders</div>
 <span class="dsprofilehead name">Name</span>
 <span class="dsprofilehead">M</span>
 <span class="dsprofilehead">WS</span>
@@ -204,7 +230,7 @@ they are not repeated here.</p>
 
 <div class="dsdesc">This unit contains 1 Imperial Guard Land Speeder. It can
 additionally contain up to 2 Imperial Guard Land Speeders (<strong>Power Rating
-+4</strong> per model). Every model is equipped with: plasma cannon.</div>
++3</strong> per model). Every model is equipped with: plasma cannon.</div>
 
 <span class="dsprofilehead weapon name">Weapon</span>
 <span class="dsprofilehead weapon">Range</span>
@@ -279,16 +305,107 @@ suffers 1 mortal wound.</span>
 </div>
 <p><a href="http://solegends.com/citcat1991a/cat1991ap023smlandspeeders-00.htm">
 Land Speeders catalogue</a> on Stuff of Legends.</p>
+
+<div class="datasheet">
+<div class="dstitle"><span class="cat el"></span><span class="power">1</span>Ratling Chef</div>
+<span class="dsprofilehead name">Name</span>
+<span class="dsprofilehead">M</span>
+<span class="dsprofilehead">WS</span>
+<span class="dsprofilehead">BS</span>
+<span class="dsprofilehead">S</span>
+<span class="dsprofilehead">T</span>
+<span class="dsprofilehead">W</span>
+<span class="dsprofilehead">A</span>
+<span class="dsprofilehead ttn">Ld</span>
+<span class="dsprofilehead ttn">Sv</span>
+
+<span class="dsprofilerow name">Ratling Chef</span>
+<span class="dsprofilerow">5"</span>
+<span class="dsprofilerow">5+</span>
+<span class="dsprofilerow">3+</span>
+<span class="dsprofilerow">2</span>
+<span class="dsprofilerow">2</span>
+<span class="dsprofilerow">2</span>
+<span class="dsprofilerow">1</span>
+<span class="dsprofilerow">6</span>
+<span class="dsprofilerow">6+</span>
+
+<div class="dsdesc">A Ratling Chef is a single model equipped with a ladle, stub 
+pistol and hot stew.</div>
+
+<span class="dsprofilehead weapon name">Weapon</span>
+<span class="dsprofilehead weapon">Range</span>
+<span class="dsprofilehead weapon type">Type</span>
+<span class="dsprofilehead weapon">S</span>
+<span class="dsprofilehead weapon">AP</span>
+<span class="dsprofilehead weapon">D</span>
+<span class="dsprofilehead weapon col2">Abilities</span>
+
+<span class="dsprofilerow name odd">Ladle</span>
+<span class="dsprofilerow odd">Melee</span>
+<span class="dsprofilerow type odd">Melee</span>
+<span class="dsprofilerow odd">+1</span>
+<span class="dsprofilerow odd">-</span>
+<span class="dsprofilerow odd">1</span>
+<span class="dsprofilerow col2 odd">-</span>
+<span class="dsprofilerow name">Stub Pistol</span>
+<span class="dsprofilerow">9"</span>
+<span class="dsprofilerow type">Pistol 1</span>
+<span class="dsprofilerow">4</span>
+<span class="dsprofilerow">0</span>
+<span class="dsprofilerow">1</span>
+<span class="dsprofilerow col2">-</span>
+
+<span class="dssection">Abilities</span>
+<span class="col1"><div><strong>Shoot Sharp and Scarper:</strong> Immediately after making a Shooting attack (other than firing Overwatch), this unit
+can move as if it were the Movement phase (though it cannot Advance as part of this move).</div>
+<div><strong>Naturally Stealthy:</strong> Models in this unit receive a +2 bonus to their saving throw when they receive the benefits of
+cover instead of only +1.</div>
+</span>
+<span class="col2"><strong>Hot Stew:</strong> Instead of firing Overwatch, this
+model can hurl his stew. Roll a D6: on a 4+ the charging unit takes 1 mortal
+wound. In addition, <span class="kw">Ratling</span> units within 6" of a friendly
+Ratling Chef can use the Chef's Leadership instead of their own.</span>
+
+<span class="dssection">Faction Keywords</span>
+<span class="col12 kw">Imperium, Astra Militarum, Militarum Auxilia</span>
+<span class="dssection lastrow">Keywords</span>
+<span class="col12 kw lastrow">Character, Infantry, Ratling, Ratling Chef</span>
+</div>
 <h2>Points Values</h2>
+<div class="pvwrapper">
 <div class="pvunittable">
 <span class="pvtitle">Fast Attack</span>
-<span class="pvhead">Unit</span>
+<span class="pvhead name">Unit</span>
 <span class="pvhead ctr">Models Per Unit</span>
 <span class="pvhead ctr">Points Per Model <div>(Excluding Wargear)</div></span>
 
-<span class="pvrow">Imperial Guard Land Speeders</span>
+<span class="pvrow name">Imperial Guard Land Speeders</span>
 <span class="pvrow ctr">1-3</span>
 <span class="pvrow ctr">35</span>
+
+<span class="pvrow name">Ratling Chef</span>
+<span class="pvrow ctr">1</span>
+<span class="pvrow ctr">15</span>
+</div>
+
+<div class="pvweapontable">
+<span class="pvtitle">Ranged Weapons</span>
+<span class="pvhead name">Weapon</span>
+<span class="pvhead ctr">Points Per Weapon</span>
+
+<span class="pvrow name">Stub Pistol</span>
+<span class="pvrow ctr">0</span>
+</div>
+
+<div class="pvweapontable">
+<span class="pvtitle">Melee Weapons</span>
+<span class="pvhead name">Weapon</span>
+<span class="pvhead ctr">Points Per Weapon</span>
+
+<span class="pvrow name">Ladle</span>
+<span class="pvrow ctr">0</span>
+</div>
 </div>
 </body>
 </html>

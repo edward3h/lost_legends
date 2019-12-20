@@ -1,0 +1,294 @@
+<html>
+<head>
+<title>Codex: Lost Legends</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:400,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i&display=swap');
+
+ul {
+  margin: 0;
+}
+body {
+  background-color: #C8C8C8;
+background-image: linear-gradient(60deg, rgba(0,0,0,0.6) 0%, rgba(185,185,185,0.6) 15%, rgba(255,255,255,0.6) 100%), url("assets/5022.png");
+  font-family: 'Crimson Text', serif;
+}
+p {
+margin: 0 10%;
+}
+div.datasheet {
+  display: grid;
+  grid-template-columns: [name] 4fr [col1] 1fr repeat(6, 1fr) [col2] 1fr 6fr;
+  margin: 0 10%;
+  border-radius: 30px;
+  border: medium ridge;
+  background-color: #EEE;
+  font-family: 'Crimson Text', serif;
+}
+
+div.datasheet > div, div.datasheet > span {
+  padding: 4px;
+}
+div.dstitle {
+  grid-column: span 10;
+  place-self: justify;
+  text-align: center;
+  background-color: black;
+background: linear-gradient(60deg, rgba(0,0,0,0.8) 0%, rgba(0,8,112,0.8) 100%), url("assets/5022.png");
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 29px 27px 0 0;
+  line-height: 80px;
+  position: relative;
+}
+div.dsdesc {
+  grid-column: span 10;
+  border-top: medium solid black;
+}
+.type {
+  grid-column: span 3;
+  padding-left: 1em;
+}
+.col1 {
+  grid-column: col1 / span 7;
+}
+.col2 {
+  grid-column: col2 / span 2;
+}
+.col12 {
+  grid-column: col1 / span 9;
+}
+.dsprofilehead, .pvhead {
+  background-color: #BBB;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  padding: 2px;
+}
+.dsprofilehead.weapon {
+  border-bottom: medium solid black;
+  font-size: 1.3em;
+}
+.dsprofilerow, .pvrow {
+  padding: 2px;
+  background-color: #FFF;
+}
+.dsprofilerow.odd {
+  background-color: #D8D8D8;
+}
+.ttn {
+  text-transform: none;
+}
+.cat {
+  float: left;
+  background-image: url("assets/octagon.png");
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+.fa::after {
+  content: url("assets/icon_FA.png");
+position: relative;
+  top: 20px;
+}
+.power {
+  float: left;
+  background-image: url("assets/octagon.png");
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -20px;
+  left: 68px;
+  line-height: 80px;
+  font-size: larger;
+}
+.lastrow {
+  padding-bottom: 3px;
+}
+.dssection, .dssection + .col12, .dssection + .col1, .dssection + .col1 + .col2 {
+  border-top: thin solid black;
+}
+.dssection {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.kw {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+div.datasheet .name, div.datasheet div.dsdesc, div.datasheet .dssection {
+  padding-left: 12px;
+}
+h1, h2 {
+  text-align: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    clear: both;
+    margin-bottom: 0;
+}
+h2.faction {
+  background-color: black;
+  color: white;
+
+}
+div.pvunittable {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+    margin: 0 10%;
+  width: 40%;
+border: thin ridge;
+}
+
+.pvtitle {
+  grid-column: span 3;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+padding-left: 12px;
+}
+.pvhead div {
+font-family: 'Crimson Text', serif;
+text-transform: none;
+font-size: 0.5em;
+}
+.ctr {
+place-self: justify;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Codex: Lost Legends</h1>
+<p>In the spirit of the official Legends publications, this document provides 
+updated rules for older models which no longer appear in existing sources.</p>
+<p>This document is fan created and entirely unofficial.</p>
+<p>Some datasheets may include rules which appear in the relevant faction Codex -
+they are not repeated here.</p>
+<hr>
+<h2 class="faction">Astra Militarum</h2>
+<h2>Datasheets</h2>
+<div class="datasheet">
+<div class="dstitle"><span class="cat fa"></span><span class="power">4</span>Imperial Guard Land Speeders</div>
+<span class="dsprofilehead name">Name</span>
+<span class="dsprofilehead">M</span>
+<span class="dsprofilehead">WS</span>
+<span class="dsprofilehead">BS</span>
+<span class="dsprofilehead">S</span>
+<span class="dsprofilehead">T</span>
+<span class="dsprofilehead">W</span>
+<span class="dsprofilehead">A</span>
+<span class="dsprofilehead ttn">Ld</span>
+<span class="dsprofilehead ttn">Sv</span>
+
+<span class="dsprofilerow name">Imperial Guard Land Speeder</span>
+<span class="dsprofilerow">16"</span>
+<span class="dsprofilerow">4+</span>
+<span class="dsprofilerow">4+</span>
+<span class="dsprofilerow">3</span>
+<span class="dsprofilerow">5</span>
+<span class="dsprofilerow">6</span>
+<span class="dsprofilerow">2</span>
+<span class="dsprofilerow">6</span>
+<span class="dsprofilerow">4+</span>
+
+<div class="dsdesc">This unit contains 1 Imperial Guard Land Speeder. It can
+additionally contain up to 2 Imperial Guard Land Speeders (<strong>Power Rating
++4</strong> per model). Every model is equipped with: plasma cannon.</div>
+
+<span class="dsprofilehead weapon name">Weapon</span>
+<span class="dsprofilehead weapon">Range</span>
+<span class="dsprofilehead weapon type">Type</span>
+<span class="dsprofilehead weapon">S</span>
+<span class="dsprofilehead weapon">AP</span>
+<span class="dsprofilehead weapon">D</span>
+<span class="dsprofilehead weapon col2">Abilities</span>
+
+<span class="dsprofilerow name">Plasma Cannon</span>
+<span class="dsprofilerow col12">When attacking with this weapon, choose one of
+the profiles below</span>
+<span class="dsprofilerow name">- Standard</span>
+<span class="dsprofilerow">36"</span>
+<span class="dsprofilerow type">Heavy D3</span>
+<span class="dsprofilerow">7</span>
+<span class="dsprofilerow">-3</span>
+<span class="dsprofilerow">1</span>
+<span class="dsprofilerow col2">-</span>
+<span class="dsprofilerow name">- Supercharge</span>
+<span class="dsprofilerow">36"</span>
+<span class="dsprofilerow type">Heavy D3</span>
+<span class="dsprofilerow">8</span>
+<span class="dsprofilerow">-3</span>
+<span class="dsprofilerow">2</span>
+<span class="dsprofilerow col2">On a hit roll of 1, the bearer is slain after all of this
+weapon’s shots have been resolved.</span>
+<span class="dsprofilerow name odd">Multi-melta</span>
+<span class="dsprofilerow odd">24"</span>
+<span class="dsprofilerow type odd">Heavy 1</span>
+<span class="dsprofilerow odd">8</span>
+<span class="dsprofilerow odd">-4</span>
+<span class="dsprofilerow odd">D6</span>
+<span class="dsprofilerow col2 odd">When resolving an attack made with this weapon
+against a unit that is within half range, roll two D6 when inflicting damage
+with it and discard one of the results.</span>
+<span class="dsprofilerow name">Meltagun</span>
+<span class="dsprofilerow">12"</span>
+<span class="dsprofilerow type">Assault 1</span>
+<span class="dsprofilerow">8</span>
+<span class="dsprofilerow">-4</span>
+<span class="dsprofilerow">D6</span>
+<span class="dsprofilerow col2">When resolving an attack made with this weapon
+against a unit that is within half range, roll two D6 when inflicting damage
+with it and discard one of the results.</span>
+<span class="dsprofilerow name odd">Heavy Bolter</span>
+<span class="dsprofilerow odd">36"</span>
+<span class="dsprofilerow type odd">Heavy 3</span>
+<span class="dsprofilerow odd">5</span>
+<span class="dsprofilerow odd">-1</span>
+<span class="dsprofilerow odd">1</span>
+<span class="dsprofilerow col2 odd">-</span>
+
+<span class="dssection">Wargear Options</span>
+<span class="col12"><ul>
+<li>Any model can be equipped with 1 multi-melta instead of 1 plasma cannon.</li>
+<li>Any model can additionally be equipped with one of the following: 1 meltagun,
+1 heavy bolter.</li>
+</ul></span>
+
+<span class="dssection">Abilities</span>
+<span class="col1"><strong>Anti-grav Upwash:</strong> Whilst this unit contains
+3 models, models in this unit have a Move characteristic of 20".</span>
+<span class="col2"><strong>Explodes:</strong> When this model is destroyed, roll
+one D6 before removing it from play. On a 6 it explodes, and each unit within 3"
+suffers 1 mortal wound.</span>
+
+<span class="dssection">Faction Keywords</span>
+<span class="col12 kw">Imperium, Astra Militarum, &lt;Regiment&gt;</span>
+<span class="dssection lastrow">Keywords</span>
+<span class="col12 kw lastrow">Vehicle, Fly, Imperial Guard Land Speeders</span>
+</div>
+<p><a href="http://solegends.com/citcat1991a/cat1991ap023smlandspeeders-00.htm">
+Land Speeders catalogue</a> on Stuff of Legends.</p>
+<h2>Points Values</h2>
+<div class="pvunittable">
+<span class="pvtitle">Fast Attack</span>
+<span class="pvhead">Unit</span>
+<span class="pvhead ctr">Models Per Unit</span>
+<span class="pvhead ctr">Points Per Model <div>(Excluding Wargear)</div></span>
+
+<span class="pvrow">Imperial Guard Land Speeders</span>
+<span class="pvrow ctr">1-3</span>
+<span class="pvrow ctr">35</span>
+</div>
+</body>
+</html>
